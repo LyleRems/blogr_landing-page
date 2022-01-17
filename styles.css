@@ -1,0 +1,534 @@
+
+*,
+*:before,
+*:after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-size: 1rem;
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;    
+    background-color: #FAFAFA;
+    
+}
+
+:root{
+--lightred: hsl(356, 100%, 66%);/*cta text*/
+--verylightred: hsl(355, 100%, 74%);/*cta background*/
+--white: hsl(0, 0%, 100%);/*text*/
+--greyblue: hsl(240, 2%, 79%); /*footer text*/
+--verydkblue: hsl(208, 49%, 24%);/*headings*/
+--verydkgreyblue: hsl(207, 13%, 34%); /*body copy*/
+--verydkblackblue: hsl(240, 10%, 16%); /*footer background*/
+
+/*background gradient - intro/CTA mobile nav*/
+--verylightred: hsl(13, 100%, 72%);
+--lightred: hsl(353, 100%, 62%);
+
+/*background gradient body */
+--verydkgreyblue2: hsl(237, 17%, 21%);
+--verydkdesblue: hsl(237, 23%, 32%);
+}
+/*
+font-family: 'Overpass', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
+*/
+h1{
+    font-family: 'Overpass', sans-serif;
+    font-size: 3.90rem;
+    letter-spacing: -2.13px;
+    font-weight: 600;
+    color: var(--white);
+}
+h2{
+    font-family: 'Overpass', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 300;
+    color: hsl(0, 0%, 90%);
+}
+h3{
+    font-family: 'Overpass', sans-serif;
+    font-size: 2.438rem;
+    letter-spacing: -.50;
+    font-weight: 600;
+    color: var(--verydkblue);
+}
+h4{
+    font-family: 'Overpass', sans-serif;
+    font-size: 1.75rem;
+    letter-spacing: -.09px;
+    font-weight: 600;
+    color: var(--verydkblue);
+}
+p{
+    font-family: 'Overpass', sans-serif;
+    font-size: 1rem;
+    letter-spacing: .035rem;
+    line-height: 28px;
+    font-weight: 300;
+    color: var(--verydkgreyblue);
+}
+
+/*-------CTA Banner Start-------*/
+.header{
+    
+    position: relative;
+    display: flex;
+    justify-content: center;
+    background: url(images/bg-pattern-intro-desktop.svg), no-repeat fixed, linear-gradient(174deg,hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+    background-size: 225%;
+    background-position: 26% 55%;
+    border-radius: 0 0 0 98px;
+    height: 600px;
+    max-width: 1440px;
+    width: 100%;
+    z-index: 1;
+    
+}
+.cta-container{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    margin-top: 85px;
+}
+.cta-container h1{
+    margin-bottom: 7px;
+}
+.cta-container h2{
+    margin: 6px 0 43px 0;
+    
+}
+.cta-buttons{
+    display: flex;
+    flex-wrap: nowrap;
+}
+.btn{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1rem;
+    letter-spacing: .1px;
+    font-weight: 600;
+    background-color: var(--white);
+    color: hsl(353, 100%, 62%);
+    border-radius: 1.875rem;
+    border: none;
+    padding: 14px 15px;
+    transition: all 200ms ease-in;
+    margin: 0 10px 0 0;
+}
+.btn.primary:hover{
+    background-color: hsl(355, 100%, 74%);
+    color: var(--white);
+}
+.btn.secondary{
+    background-color: transparent;
+    border: solid 1px hsl(0, 0%, 90%);;
+    color: hsl(0, 0%, 90%);
+    margin: 0 0 0 10px;
+    padding: 15px 23px;
+}
+.btn.secondary:hover{
+    background-color: var(--white);
+    color: hsl(353, 100%, 62%);
+}
+.btn:hover{
+    cursor: pointer;
+}
+@media (max-width: 375px){
+    .header{
+        background: url(images/bg-pattern-intro-mobile.svg), no-repeat fixed, linear-gradient(174deg,hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+        background-size: 330%;
+        background-position: 36% 35%;
+        border-radius: 0 0 0 98px;
+       }
+    .cta-container{
+        padding: 0 25px;
+        margin-top: 47px;
+    }
+    .cta-container h1{
+        font-size: 2.2rem;
+        letter-spacing: -1px;
+        padding: 5px;
+        
+       }
+       .cta-container h2{
+        font-size: 1.1rem;
+        padding: 0;
+       }
+       .btn{
+        font-size: 1.1rem;
+        letter-spacing: 0;
+        font-weight: 600;
+        margin: 0 4px;
+        padding: 13px 11px;
+        
+    }
+    
+}
+/*-------CTA Banner End-------*/
+
+/*--Designed for the future Start--*/
+.wrapper-designed-for-future{
+    width: 100%;
+    background-color: #FAFAFA;
+    overflow: hidden;
+}
+.container-body-content{
+    margin: -287px 0 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+}
+.margin-headings{                       /*--standard margin for desktop headings--*/
+    margin: 20px 0;
+}
+.margin-headings.a{
+    margin-top: 63px;
+}
+.content-spacer{
+    width: 100%;
+    height: 25px;
+}
+
+.heading-div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 155px 0;       /*--padding to control height?--*/
+    z-index: 10;
+}
+.heading-div h3{
+    letter-spacing: -1px;
+}
+
+/*--Space between paragraph and heading--*/
+.description-1 p{
+    margin-bottom: 33px;
+}
+
+.description-1{
+    flex-basis: 43%;            /*--may want to adjust width instead of padding--*/
+    order: 1;
+    padding-right: 75px;
+   
+}
+.description-1-image{
+    flex-basis: 35%;
+    order: 2;
+    margin-right: -435px;
+    z-index: 1;
+}
+.section-1-image-mobile{
+    display: none;
+}
+@media (max-width: 375px){
+    .container-body-content{
+        margin-top: 0;          /*container switched from row to column*/
+        
+}
+    .heading-div {                 /*heading switched from row to column*/
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 67px;          /*margin adjusted to control height*/
+        margin-bottom: 23px;
+        width: 100%;
+        }
+    .heading-div h3 {           /*font adjusted for mobile */
+        font-size: 1.75rem;
+        margin-top: 35px;
+        margin-bottom: 30px;
+    }
+    .description-1{             /*order and flex basis adjusted for mobile*/
+        text-align: center;
+        flex-basis: 90%;
+        order: 2;
+        padding-right: 0;
+        margin-top: -45px;
+    }
+    .description-1-image{
+        visibility: hidden;     /*--desktop image not visible--*/
+      
+    }
+    .section-1-image-mobile{    /*--display mobile image--*/
+        display: block;
+        margin-top: 0;
+        }
+    .margin-headings.a.mobile{
+        padding: 20px;
+        margin-bottom: -10px;
+    }
+    .margin-headings.b.mobile{
+        padding: 20px;
+        margin-bottom: -10px;
+    }
+    .content-spacer{
+        width: 0;
+        height: 0;
+    }
+}
+
+/*State of the art infastructure start*/
+.wrapper-state-of-the-art{
+    margin-top: 50px;
+    display: flex;
+    position: relative;
+    justify-content: space-evenly;
+    align-items: center;
+    background: url(images/bg-pattern-circles.svg) no-repeat -177% 85% / 85%,
+	linear-gradient(hsl(237, 17%, 21%), hsl(237, 23%, 32%));
+    height: 400px;
+    width: 100%;
+    border-radius: 0 98px 0 98px;
+    z-index: 10;
+    
+}
+
+.container-body-content-2{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;      /*tried to match project using space evenly*/
+    align-items: center;
+}
+.mobile-phones{
+    flex-basis: 38%;
+    margin-top: 39px;       /*margin used to adjust phones alignment*/
+    padding-left:57px;
+    order: 1;
+    z-index: 10;
+}
+.info-paragraph{
+    flex-basis: 39%;        /*used percentage to match project style paragraph*/
+    order: 2;
+    margin-right: 78px;
+    
+}
+.info-paragraph h3{
+    letter-spacing: -.7px;
+    
+}
+.white-text{
+    color: var(--white);        /*created class for paragraph text*/
+}
+
+@media (max-width:375px){
+    
+    .wrapper-state-of-the-art{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: var(--verydkdesblue);
+        background: url(images/bg-pattern-circles.svg) no-repeat 38% -138% / 130%,
+	linear-gradient(hsl(237, 17%, 21%), hsl(237, 23%, 32%));
+        max-height: 626px;
+        height: 100vh;
+        width: 100%;
+        border-radius: 0 98px 0 98px;
+        margin-top: -800px;
+        }
+        .container-body-content-2{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;      /*tried to match project using space evenly*/
+            align-items: center;
+            
+        }
+        .container-body-content{
+            margin-bottom: 168px;
+        }
+    .mobile-phones{
+        
+        width: 100%;
+        margin-bottom: -25px;       /*margin used to adjust phones alignment*/
+        margin-top: -334px; 
+        padding-left: 0;
+        margin-left: 0;
+        order: 1;
+        z-index: 10;
+    }
+    .info-paragraph{
+        text-align: center;
+            flex-basis: 85%;        /*text- align center width adjusted*/
+            order: 2;
+            padding: 0 27px;
+            margin-right: 0;
+            margin-top: 15px;
+        }
+    
+    .info-paragraph h3{
+        font-size: 2.4rem;
+    }
+}
+
+/*--Free Open Simple Start---*/
+.wrapper-free-open-simple{
+    width: 100%;
+    background-color: #FAFAFA;
+    overflow: hidden;
+}
+.container-body-content-free{
+    margin-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+}
+.description-1-free{
+    flex-basis: 43%;            /*--may want to adjust width instead of padding--*/
+    order: 2;
+    padding-left: 40px;
+}
+.description-1-image-free{
+    flex-basis: 35%;
+    order: 1;
+    margin-top: 19px;
+    margin-left: -400px;
+    z-index: 1;
+}
+@media(max-width: 375px){
+    .container-body-content-free{
+        margin-top: 43px;
+        flex-direction: column;
+        text-align: center;
+        
+    
+    }
+    .description-1-free{
+        flex-basis: 95%;            
+        order: 2;
+        padding-left: 0;
+        padding-right: 25px;
+    }
+    .description-1-image-free{
+        flex-basis: 100%;
+        order: 1;
+        margin-left: 0;
+        z-index: 1;
+    }
+    .section-1-image-free{
+        display: none;
+    }
+    .mobile-laptop{
+        background-image: url(images/illustration-laptop-mobile.svg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 406px;
+        height: 331px;
+    }
+   
+
+}
+
+/*--Footer Start--*/
+
+.wrapper-footer,
+ ul,
+  li,
+   a{
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Overpass', sans-serif;
+    font-size: 1rem;
+    letter-spacing: .035rem;
+    line-height: 35px;
+    font-weight: 300;
+    color: var(--greyblue);
+}
+.col-link a:hover{
+    text-decoration: underline 2px;
+
+   
+}
+.wrapper-footer{
+    margin-top: 118px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    min-height: 375px;
+    width: 100%;
+    border-radius: 0 98px 0 0;
+    background-color: var(--verydkblackblue);
+}
+.container-columns{
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: center;
+    width: 90%;
+   
+    
+}
+.col > ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: left;
+    width: 20%;
+    
+    
+}
+.col-heading a{
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+    color: var(--white);
+    
+}
+li.col-heading{
+    margin-bottom: 20px;
+}
+ul, .product, .company, .connect{
+    padding-left: 7px;
+}
+@media (max-width: 375px){
+    .wrapper-footer,
+ ul,
+  li,
+   a{
+    
+    line-height: 35px;
+    
+}
+.wrapper-footer{
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    margin-top: 100px;
+    
+    
+}
+.container-columns{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 35px 0 50px 0;
+}
+.col{
+    display: block;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 30px;
+}
+.col-heading a{
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+    color: var(--white);
+    
+}
+li.col-heading{
+    margin-bottom: 25px;
+}
+}

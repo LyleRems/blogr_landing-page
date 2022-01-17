@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Blogr Main landing page - Frontend Mentor</title>
+        <meta name="description" content="Main landing page">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!--Google fonts-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+
+        <!--Stylesheets-->
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="stylesnav.css">
+
+        <!--JQuery-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        
+    </head>
+    <body>
+
+       
+<!-- CTA Header Banner-->
+<section class="header" role="main">
+
+<!--Navigation Desktop Start-->
+<nav role="navigation">
+    <div class="navbarcontainer" id="navD" >
+        <ul>
+            <div class="left">
+             <li><a href="#"><img class="logo" src="images/logo.svg" alt="Logo Blogr"></a></li>
+                <li>
+                    <a href="#" class="text-underline">Product <img class="arrow" src="images/icon-arrow-light.svg" alt="menu arrow"></a>
+                        <ul class="dd">
+                            <li><a href="#">Overview</a></li>
+                            <li><a href="#">Pricing</a></li>
+                            <li><a href="#">Marketplace</a></li>
+                            <li><a href="#">Features</a></li>
+                            <li><a href="#">Integrations</a></li>
+                            
+                        </ul>
+                    </li>
+                <li>
+                    <a href="#" class="text-underline">Company <img class="arrow" src="images/icon-arrow-light.svg" alt="menu arrow"></a>
+                        <ul class="dd">
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Team</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Careers</a></li>
+                        </ul>
+                    </li>
+                <li>
+            <a href="#" class="text-underline">Connect <img class="arrow" src="images/icon-arrow-light.svg" alt="menu arrow"></a>
+                <ul class="dd">
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Newsletter</a></li>
+                    <li><a href="#">LinkedIn</a></li>
+                    </ul>
+                </li>
+            </div>
+                <div class="right">
+                <ul>
+                    <li class="login-margin"><a href="#">Login</a></li>
+                    <li class="button cta"><a href="#">Sign Up</a></li>
+                </ul>
+            </div>
+        </ul>
+    </div>
+</nav>
+<!--NavbarDesktop scripts-->
+<script>
+$('ul.dd').hide();
+$('ul, li, a.text-underline').hover(function () {
+if ($('> ul.dd',this).length > 0) {
+    $('> ul.dd',this).stop().slideDown();
+}
+},function () {
+	if ($('> ul.dd',this).length > 0) {
+		$('> ul.dd',this).stop().slideUp();
+	}
+});
+</script>
+<!--Navigation Desktop End-->
+
+<!--Mobile Nav Hamburger Start-->
+<nav class="navbarcontainer-mobile" role="navigation" aria-label="mobile navigation" >
+    <ul>
+        <li class="logo mobile"> <a href="#"><img src="images/logo.svg" alt="Logo Blogr"></a></li>
+        <li class="toggle" > <a href="#"><img src="images/icon-hamburger.svg" alt="hamburger toggle"></a></li>
+        <li class="toggle cross"><a href="#"><img src="images/icon-close.svg" alt="hamburger close" ></a></li>
+    </ul>
+<div class="spacer-for-dropdown"></div>
+        <div class="dropdown-wrapper">
+            <li class="has-submenu">
+                <a class="dropbtn1" tab-index="0">Product <img id="image1" src="images/icon-arrow-dark.svg"></a>
+                    <ul>
+                        <div class="dropdown-container1">
+                            <li class="subitem"><a href="#">Overview</a></li>
+                            <li class="subitem"><a href="#">Pricing</a></li>
+                            <li class="subitem"><a href="#">Marketplace</a></li>
+                            <li class="subitem"><a href="#">Features</a></li>
+                            <li class="subitem"><a href="#">Integrations</a></li>
+                        </div>
+                    </ul>
+                </li>
+            <li class="has-submenu">
+                <a class="dropbtn2" tab-index="0">Company <img id="image2" src="images/icon-arrow-dark.svg"></a>
+                    <ul>
+                        <div class="dropdown-container2">
+                            <li class="subitem"><a href="#">About</a></li>
+                            <li class="subitem"><a href="#">Team</a></li>
+                            <li class="subitem"><a href="#">Blog</a></li>
+                            <li class="subitem"><a href="#">Careers</a></li>
+                        </div>
+                    </ul>
+                </li>
+            <li class="has-submenu">
+                <a class="dropbtn3" tab-index="0">Connect <img id="image3" src="images/icon-arrow-dark.svg"></a>
+                    <ul>
+                        <div class="dropdown-container3">
+                            <li class="subitem"><a href="#">Contact</a></li>
+                            <li class="subitem"><a href="#">Newsletter</a></li>
+                            <li class="subitem"><a href="#">LinkedIn</a></li>
+                        </div>
+                    </ul>
+                </li>
+        <div class="login-mobile">
+            <li class="mobile-login"><a href="#">Login</a></li>
+            <li class="button cta-mobile"><a href="#">Sign Up</a></li>
+        </div>
+    </div>
+    </nav>
+<!--Mobile hamburger toggle-->
+    <script>
+        $(document).ready(function(){
+          $(".toggle").click(function(){
+            $(".dropdown-wrapper").toggle();
+          });
+        });
+
+        $(document).ready(function(){
+          $(".toggle").click(function(){
+            $(".toggle").hide();
+          });
+        });
+        $(document).ready(function(){
+          $(".toggle").click(function(){
+            $(".cross").show();
+          });
+        });
+        $(document).ready(function(){
+          $(".cross").click(function(){
+            $(".toggle").show();
+            $(".cross").hide();
+          });
+        });
+        
+//submenu reveal Start
+$(document).ready(function(){
+          $(".dropbtn1").click(function(){
+            $(".dropdown-container1").toggle();
+          });
+        });
+$(document).ready(function(){
+          $(".dropbtn2").click(function(){
+            $(".dropdown-container2").toggle();
+          });
+        });
+$(document).ready(function(){
+          $(".dropbtn3").click(function(){
+            $(".dropdown-container3").toggle();
+          });
+        });
+//submenu reveal end
+
+//flipping arrow effect 
+$(document).ready(function() {
+    $(".dropbtn1" ).click( function() {
+        $("#image1").toggleClass('flip');
+    });
+});
+$(document).ready(function() {
+    $(".dropbtn2" ).click( function() {
+        $("#image2").toggleClass('flip');
+    });
+});
+$(document).ready(function() {
+    $(".dropbtn3" ).click( function() {
+        $("#image3").toggleClass('flip');
+    });
+});
+</script>
+<!--Mobile Nav Hamburger End-->
+
+<!--CTA-->
+<div class="cta-container">
+        <h1>A modern publishing platform</h1>
+        <h2>Grow your audience and build your online brand</h2>
+            <div class="cta-buttons">
+                <button class="btn primary" href="#">Start for Free</button>
+                <button class="btn secondary" href="#">Learn More</button>
+            </div>
+        </div>
+    
+</section>     
+<!--Navigation End-->
+
+<!--Designed for the future start-->
+<section class="wrapper-designed-for-future">
+    <heading class="heading-div">
+        <h3>Designed for the future</h3>
+            <img class="section-1-image-mobile" src="images/illustration-editor-mobile.svg" alt="mobile laptop"> <!--hidden from desktop view-->
+             </heading>
+                <article class="container-body-content">
+                    <article class="description-1">
+                    <h4 class="margin-headings a mobile">Introducing an extensible editor</h4>
+                        <p>Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content.
+                            The editor supports management of multiple blogs and allows easy manipulation of embeds such as images,
+                            videos, and Markdown. Extensibility with plugins and themes provide easy ways to add functionality or change
+                            the looks of a blog.
+                            </p>
+                       <div class="content-spacer"></div>
+                            <h4 class="margin-headings b mobile">Robust content management</h4>
+                            <p  class="mb">Flexible content management enables users to easily move through posts. Increase the usability of your blog
+                            by adding customized categories, sections, format, or flow. With this functionality, you're in full control.
+                        </p>
+                    </article>
+                    <div class="description-1-image">
+                    <img class="section-1-image" src="images/illustration-editor-desktop.svg" alt="laptop">
+                </div>
+            </article>
+    </section>
+<!--Designed for the future end-->
+
+<!--State of the art infastructure start-->
+<section class="wrapper-state-of-the-art">
+    <div class="container-body-content-2">
+        <img class="mobile-phones" src="images/illustration-phones.svg" alt="mobile phones">
+            <div class="info-paragraph">
+                <h3 class="white-text margin-headings">State of the Art infastructure</h3>
+                    <p class="white-text">With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity.
+                    This ensures your site will load instantly, no matter where your readers are, keeping your site competative.
+                </p>
+            </div>
+        </div>
+</section>
+<!--State of the art infastructure end-->
+
+<!--Designed for the future start-->
+<section class="wrapper-free-open-simple">
+                <div class="container-body-content-free">
+                    <article class="description-1-free">
+                    <h4 class="margin-headings">Free, open, simple</h4>
+                        <p>Blogr is a free and open source application backed by a large community of helpful developers. It supports 
+                            features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools,
+                            and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.
+                            </p>
+                        <div class="content-spacer"></div>
+                        <div class="content-spacer"></div>
+                            <h4 class="margin-headings">Powerful Tooling</h4>
+                            <p>Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment
+                                a breeze, but capable of producing even the most complicated sites.
+                            </p>
+                    </article>
+                    <div class="description-1-image-free">
+                    <img class="section-1-image-free" src="images/illustration-laptop-desktop.svg" alt="laptop">
+                    <div class="mobile-laptop" alt="mobile laptop"></div>
+                </div>
+            </div>
+    </section>
+<!--Designed for the future end-->
+
+<!--Footer-->
+<section class="wrapper-footer">
+    <div class="container-columns">
+        <div class="col">
+            <img class="logo" src="images/logo.svg" alt="Logo Blogr">
+        </div>
+        <div class="col">
+            <ul class="product">
+                <li class="col-heading"><a href="#">Product</a></li>
+                    <li class="col-link"><a href="#">Overview</a></li>
+                    <li class="col-link"><a href="#">Pricing</a></li>
+                    <li class="col-link"><a href="#">Marketplace</a></li>
+                    <li class="col-link"><a href="#">Features</a></li>
+                    <li class="col-link"><a href="#">Integrations</a></li>
+                </ul>
+            </div>
+        <div class="col">
+            <ul class="company">
+                <li class="col-heading"><a href="#">Company</a></li>
+                    <li class="col-link"><a href="#">About</a></li>
+                    <li class="col-link"><a href="#">Team</a></li>
+                    <li class="col-link"><a href="#">Blog</a></li>
+                    <li class="col-link"><a href="#">Careers</a></li>
+                </ul>
+            </div>
+        <div class="col">
+            <ul class="connect">
+                <li class="col-heading"><a href="#">Connect</a></li>
+                    <li class="col-link"><a href="#">Contact</a></li>
+                    <li class="col-link"><a href="#">Newsletter</a></li>
+                    <li class="col-link"><a href="#">LinkedIn</a></li>
+                </ul>
+            </div>
+        
+    </div>
+</section>
+    
+
+
+    </body>
+</html>

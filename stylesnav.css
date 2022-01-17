@@ -1,0 +1,255 @@
+
+/*------TOP NavBar------*/
+/*---do html with nested elements, including the submenu, then style it.
+use ul instead of a tags. find out how to align to the right the buttons*/
+
+/*--Basic Styling--*/
+nav a{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    list-style: none;
+    text-decoration: none;
+    color: #f5f5f5;
+}
+  ul{
+  display:flex;
+  width:100%;
+  justify-content:space-between;
+  
+  
+  }
+  
+  li {
+    list-style-type: none;
+    font-size: 14px;
+    padding: 5px ;
+    
+  }
+ nav{
+     position: absolute;
+     display: flex;
+     max-width: 1440px;
+     width: 98%;
+     height: 100px;
+     top: 55px;
+     z-index: 5;                        /*Z-index set to overlap header*/
+ }
+  .navbarcontainer {
+    width:80%;
+    height:100%;
+    margin: 0 auto;
+    background-color: transparent;
+    z-index:10;
+}
+/*--Space logo--*/
+nav a .logo{
+    margin-right: 40px;
+}
+/*--Aligning left and right div containers--*/
+.navbarcontainer .left, .right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+/*---Nav lists positioned on left and right--*/
+  .left{
+  display:flex}
+  .right{
+  display:flex}
+
+  .login-margin a{
+    color: hsl(0, 0%, 90%);
+    margin-right: 18px;
+  }
+  .login-margin a:hover{
+    text-decoration: underline;
+    color: var(--white);
+  }
+/*--Navbar main links--*/
+.navbarcontainer ul a.text-underline{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-left: 18px;
+    text-decoration: none;
+    color: hsl(0, 0%, 90%);
+    
+}
+.navbarcontainer ul a.text-underline:hover{
+    text-decoration: underline;
+    color: var(--white);
+}
+/*--Arrow menu rotate--*/
+nav li:hover > a .arrow{ 
+    transform: rotate(180deg);
+    
+}
+
+/*--Submenu Dropdown menu--*/
+.dd{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 65px;
+    background-color: #fff;
+    box-shadow: 1px 10px 10px 1px rgb(0 0 0 / 0.2);
+    border-radius: 5px;
+    width: 150px;
+    padding: 10px;                              /*--Set to display none to be revealed on hover--*/
+    
+}
+/*--Submenu links--*/
+.navbarcontainer ul li ul a{
+    font-family: 'Ubuntu', sans-serif;
+    color: hsl(237, 17%, 21%);
+    font-weight: 400;
+    font-size: 1rem;
+    transition: all 200ms ease-in;
+    line-height: normal;
+}
+.navbarcontainer ul li ul a:hover{
+    color:hsl(237, 23%, 32%);
+    font-weight: 600;
+
+    
+}
+/*--Button Sign-up--*/
+.button.cta a{
+    background-color: #fff;
+    border-radius: 25px;
+    padding: 15px 37px;
+    color: hsl(353, 100%, 62%);
+    text-align: center;
+    transition: all 200ms ease-in;
+}
+.button.cta a:hover{
+    background-color: hsl(355, 100%, 74%);
+    color: var(--white);
+}
+
+/*media queries display hidden*/
+@media (max-width: 1024px){                     
+    .navbarcontainer{
+        display: none;
+    }
+}
+
+@media (min-width: 1025px){                     
+    nav.navbarcontainer-mobile{
+        display: none;
+    }
+}
+/*-----------------MOBILE NAV------------------
+---------------------------------------------*/
+
+    .navbarcontainer-mobile{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        width: 90vw;
+        padding: 15px 10px 0 10px;
+    }
+    .spacer-for-dropdown{                   /*---Spacer added to prevent menu apearing making toggle margin adjust---*/
+        width:100%;
+        height: 25px;
+    }
+     /*--Dropdown menu wrapper--*/
+     .dropdown-wrapper{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-color: #fff;
+        border-radius: 5px;
+        width: 100%;
+        padding: 20px 20px 37px 20px;
+        margin: 0 auto;
+        box-shadow: 1px 10px 25px 10px rgba(61, 55, 88, 0.2);
+        display:none;
+    }
+    /*--logo & toggle--*/
+    .logo.mobile{
+        flex-basis: 10%;
+        
+    }
+    .toggle.cross{
+        flex-basis: 10%;     /*--adjust once I know how to--*/
+        display: none;
+        
+    }
+    .toggle{
+        flex-basis: 10%;
+    }
+    .navbarcontainer-mobile a{
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: hsl(208, 49%, 24%);
+        font-size: 1.21rem;
+        font-weight: 500;
+    }
+   
+    /*--Links container--*/
+    
+    .show {
+        display:block;
+        }
+    .has-submenu{
+        width: 100%;
+    }
+    .dropdown-container1, .dropdown-container2, .dropdown-container3{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 20px 0;
+        border-radius: 5px;
+        background-color: #EFEFF1;
+        display: none;                  /*--Hidden to be revealed with jquery--*/
+    }
+    .flip {
+        transform: rotate(-180deg);     /*--Arrow for mobile menu--*/
+      }
+
+    .dropdown-container li{                             
+        line-height: .6rem;
+    }
+    .dropdown-container li a{
+        font-size: 1rem;
+    }
+    /*--Bottom buttons secions--*/
+    .login-mobile{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .login-mobile{
+        border-top: solid 1px hsl(240, 2%, 79%);
+       
+        
+    }
+    .mobile-login{
+        
+        width: 100%;
+        margin-bottom: 15px;
+        padding-top: 15px;
+}
+    
+    .button.cta-mobile a{
+        background: linear-gradient(90deg,hsl(13, 100%, 72%), hsl(353, 100%, 62%) );
+        border-radius: 30px;
+        padding: 15px 40px;
+        transition: all 200ms ease-in;
+        color: #fff;
+        text-align: center;
+}
+    .button.cta-mobile a:hover{
+        background-color: hsl(237, 23%, 32%);
+        color: #f5f5f5;
+    }
+    
+
+
+
+
